@@ -36,7 +36,7 @@ console.log(ans(11));*/
 }
 console.log(s("tree")); */
 
-const res = (...marks) => {
+/*const res = (...marks) => {
     let s = 0;
     for(let i in marks){
         s += marks[i];
@@ -44,4 +44,29 @@ const res = (...marks) => {
     let avg = s/marks.length;
     return (avg>=40) ? "Pass" : "Fail";
 }
-console.log(res(100,100,80));
+console.log(res(100,100,80));*/
+
+const uiTeam = ["abc","def","ghi"]
+const flutterTeam = ["xyz","lmn","pqr","rst"]
+const merged = (a,b) => {
+    console.log(a);
+    console.log(b);
+    return ([...a,...b]);
+} 
+console.log(merged(uiTeam,flutterTeam));
+
+const display = (option) => {
+    switch(option){
+        case 1:
+            return uiTeam;
+            break;
+        case 2:
+            return flutterTeam;
+            break;
+        case 3:
+            return [...uiTeam,...flutterTeam];
+        default:
+            return "Your choice is wrong.";
+    }
+}
+console.log(display(3));
